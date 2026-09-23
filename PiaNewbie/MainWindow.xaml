@@ -1,0 +1,36 @@
+﻿<Window x:Class="PiaNewbie.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:PiaNewbie.Views"
+        xmlns:vm="clr-namespace:PiaNewbie.ViewModels"
+        mc:Ignorable="d"
+        Title="PiaNewbie"
+        Height="720"
+        Width="1100"
+        MinHeight="600"
+        MinWidth="900"
+        Background="#050505"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type vm:MainPageViewModel}">
+            <views:MainPage/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:SetupPageViewModel}">
+            <views:SetupPage/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:PracticeLoadingPageViewModel}">
+            <views:PracticeLoadingPage/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:PracticePageViewModel}">
+            <views:PracticePage/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:ResultPageViewModel}">
+            <views:ResultPage/>
+        </DataTemplate>
+    </Window.Resources>
+
+    <ContentControl Content="{Binding CurrentViewModel}"/>
+</Window>

@@ -1,0 +1,25 @@
+<UserControl x:Class="PiaNewbie.Views.MainPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             Background="{StaticResource BgDarkBrush}">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="PiaNewbie" Style="{StaticResource PageTitleStyle}" FontSize="48"/>
+
+            <Button Content="시작" Style="{StaticResource PrimaryButtonStyle}"
+                    Command="{Binding StartCommand}" MinWidth="200"/>
+            <Button Content="종료" Style="{StaticResource SecondaryButtonStyle}"
+                    Command="{Binding ExitCommand}" MinWidth="200"/>
+        </StackPanel>
+
+        <Button Content="?"
+                Style="{StaticResource HelpButtonStyle}"
+                Command="{Binding ShowHelpCommand}"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Margin="24"/>
+    </Grid>
+</UserControl>

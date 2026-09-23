@@ -1,0 +1,38 @@
+## Visual Studio / .NET build outputs
+.vs/
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Test and coverage outputs
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+## NuGet artifacts
+*.nupkg
+*.snupkg
+packages/
+!packages/build/
+
+## JetBrains / VS Code
+.idea/
+.vscode/
+*.sln.iml
+
+## OS-generated files
+.DS_Store
+Thumbs.db
+Desktop.ini

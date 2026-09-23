@@ -1,0 +1,17 @@
+<UserControl x:Class="PiaNewbie.Views.PracticeLoadingPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             Background="{StaticResource BgDarkBrush}">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="520" Margin="32">
+            <TextBlock Text="{Binding Title}" Style="{StaticResource PageTitleStyle}" FontSize="28"/>
+            <ProgressBar IsIndeterminate="True" Height="4" Width="240" Margin="0,0,0,28"
+                         Foreground="#3B82F6" Background="#1E293B" BorderThickness="0"/>
+            <TextBlock Text="{Binding TipMessage}" Style="{StaticResource LoadingTipStyle}"
+                       FontSize="18" Foreground="#CBD5E1"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
